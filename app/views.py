@@ -11,7 +11,7 @@ def home(request):
     """
     Renders the home page.
     """
-    # assert isinstance(request, HttpRequest)
+    assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/index.html',
@@ -35,10 +35,25 @@ def about(request):
     return render(
         request,
         'app/about.html',
-        context_instance = RequestContext(request,
         {
-            'title':'About',
-            'message':'Your application description page.',
-            'year':datetime.now().year,
-        })
+            'title': 'Gnu #, who dis?',
+            'message': "This is just a nonsense app flexin' on Azure",
+        },
+    )
+
+def link(request):
+    """
+    Renders Link's AutoBot
+    """
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/link.html',
+        {
+            'name': 'Link',
+            'host': 'theland.notroot.com',
+            'port': '4000',
+            'title': "Link's Humble Abode",
+            'message': 'If you do not know what is happening here, rememeber you can ask.',
+        },
     )
