@@ -1,0 +1,23 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+  <div class="container-liquid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{ name }}</h1>
+        <div class="info col-sm-9">
+          Host: {{ host }}
+        </div>
+        <div class="info col-sm-6">
+          Port: {{ port }}
+        </div>
+        <div class="info-2 col-sm-6">
+          <button type="button" class="btn btn-success">Connect</button>
+          <button type="button" class="btn btn-danger">Disconnect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
