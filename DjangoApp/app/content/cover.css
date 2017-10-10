@@ -162,6 +162,19 @@ body {
 
 /* Custom Job */
 
+#console {
+  height: 30rem;
+  width: 100%;
+  background-color: gray;
+  padding: 2rem;
+  margin: 2rem 0rem;
+  border: 2px solid gold;
+}
+
+.console {
+  text-align: left;
+}
+
 .info {
   text-align: left;
 }

@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
+from .models import Psychic
 
 def home(request):
     """
@@ -46,13 +47,12 @@ def link(request):
     Renders Link's AutoBot
     """
     assert isinstance(request, HttpRequest)
+    link = Psychic(Psychic, pk=1)
     return render(
         request,
         'app/link.html',
         {
-            'name': 'Link',
-            'host': 'theland.notroot.com',
-            'port': '4000',
+            'link': link,
             'title': "Link's Humble Abode",
             'message': 'If you do not know what is happening here, rememeber you can ask.',
         },
