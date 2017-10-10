@@ -37,8 +37,8 @@ def about(request):
         request,
         'app/about.html',
         {
-            'title': 'Gnu #, who dis?',
-            'message': "This is just a nonsense app flexin' on Azure",
+            'title': 'What is this?',
+            'message': "This is a switching and control center for a guild of players operating in a virtual gaming environment.",
         },
     )
 
