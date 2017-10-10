@@ -162,6 +162,10 @@ body {
 
 /* Custom Job */
 
+#attributes {
+  width: 100%;
+}
+
 #console {
   height: 30rem;
   width: 100%;
@@ -169,6 +173,10 @@ body {
   padding: 2rem;
   margin: 2rem 0rem;
   border: 2px solid gold;
+}
+
+#divHeader {
+  text-align: center;
 }
 
 .console {

@@ -7,18 +7,18 @@ from django.db import models
 class Psychic(models.Model):
     name = models.CharField(max_length=30)
     CLASSES = (
-        ('S', 'p(S)ychic'),
-        ('W', '(W)arrior'),
-        ('T', '(T)hief'),
-        ('M', '(M)age'),
-        ('C', '(C)leric'),
-        ('K', 'Mon(K)'),
-        ('P', '(P)aladin'),
-        ('D', '(D)ruid'),
+        ("p(S)ychic", 'S'),
+        ("(W)arrior", 'W'),
+        ("(T)hief", 'T'),
+        ("(M)age", 'M'),
+        ("(C)leric", 'C'),
+        ("Mon(K)", 'K'),
+        ("(P)aladin", 'P'),
+        ("(D)ruid", 'D'),
     )
     host = models.CharField(max_length=100, default='theland.notroot.com')
     port = models.IntegerField(default=4000)
-    profession = models.CharField(max_length=1, choices=CLASSES)
+    profession = models.CharField(max_length=15, choices=CLASSES)
 
     def __str__(self):
         return self.name

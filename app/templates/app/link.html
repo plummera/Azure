@@ -20,15 +20,29 @@
 
     <div class="row">
       <div class="console col-md-2">
-        <table>
-          <tr>
-            <th>Details</th>
-          </tr>
-          <tr>
-            <td>Class: </td>
-            <td>{{ link.profession }}</td>
-          </tr>
-        </table>
+        <div id="attributes" class="container-fluid">
+          <div class="row">
+            <div id="divHeader" class="col-md-12">
+              <h4><u>Attributes</u></h4>
+            </div>
+
+            <div class="col-md-6">
+              Class :
+            </div>
+
+            <div class="col-md-6">
+              {{ link.profession }}
+            </div>
+
+            <div class="col-md-6">
+              Level :
+            </div>
+
+            <div class="col-md-6">
+              {{ link.level }}
+            </div>
+          </div>
+        </div>
       </div>
       <div class="console col-md-8" data-spy="scroll" data-target="#console">
         <div id="console">
