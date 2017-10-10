@@ -4,12 +4,12 @@
   <div class="container-liquid">
     <div class="row">
       <div class="col-md-12">
-        <h1>{{ name }}</h1>
+        <h1>{{ link.name }}</h1>
         <div class="info col-sm-9">
-          Host: {{ host }}
+          Host: {{ link.host }}
         </div>
         <div class="info col-sm-6">
-          Port: {{ port }}
+          Port: {{ link.port }}
         </div>
         <div class="info-2 col-sm-6">
           <button type="button" class="btn btn-success">Connect</button>
@@ -17,7 +17,34 @@
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="console col-md-2">
+        <table>
+          <tr>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>Class: </td>
+            <td>{{ link.profession }}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="console col-md-8" data-spy="scroll" data-target="#console">
+        <div id="console">
+          <ul class="nav nav-tabs" role="tablist">
+
+          </ul>
+        </div>
+      </div>
+      <div class="console col-md-2">
+        &nbsp;
+      </div>
+    </div>
+
   </div>
 
-
 {% endblock %}
+
+{% load staticfiles %}
+<script src="{% static 'app/js/link.js' %}"></script>
