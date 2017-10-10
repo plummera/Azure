@@ -16,9 +16,9 @@ class Psychic(models.Model):
         ('P', '(P)aladin'),
         ('D', '(D)ruid'),
     )
-    profession = models.CharField(max_length=1, choices=CLASSES)
     host = models.CharField(max_length=100, default='theland.notroot.com')
     port = models.IntegerField(default=4000)
+    profession = models.CharField(max_length=1, choices=CLASSES)
 
     def __str__(self):
         return self.name

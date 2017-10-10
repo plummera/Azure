@@ -2,7 +2,7 @@
 Definition of views.
 """
 
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
@@ -47,7 +47,7 @@ def link(request):
     Renders Link's AutoBot
     """
     assert isinstance(request, HttpRequest)
-    link = Psychic(Psychic, pk=1)
+    link = get_object_or_404(Psychic, pk=1)
     return render(
         request,
         'app/link.html',
