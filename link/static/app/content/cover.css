@@ -176,6 +176,16 @@ body {
 }
 
 #divHeader {
+  color: saddlebrown;
+  padding: 3% 37%;
+  text-align: center;
+}
+
+.attribute {
+  background-color: black;
+  border-radius: 30px;
+  color: darkgoldenrod;
+  margin-right: -20.5%;
   text-align: center;
 }
 
@@ -197,4 +207,14 @@ body {
 
 .spacer {
   height: 75px;
+}
+
+.value p {
+  background-color: darkgoldenrod;
+  border-radius: 15px;
+  color: black;
+  font-size: 1.2rem;
+  margin-left: -8%;
+  text-align: center;
+  width: 140%;
 }
