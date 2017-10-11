@@ -1,10 +1,6 @@
-$(document).ready(function() {
+function updateScroll(){
+    var element = document.getElementById("portal");
+    element.scrollTop = element.scrollHeight;
+}
 
-  $('div').scrollspy({ target: '#screen' });
-  $('body').scrollspy({ target: '#navbar-example' })Ch0c0late!
-
-
-  $('[data-spy="scroll"]').each(function () {
-    var $spy = $(this).scrollspy('refresh')
-  });
-})
+setInterval(updateScroll,500);
