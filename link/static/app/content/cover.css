@@ -181,6 +181,13 @@ body {
   text-align: center;
 }
 
+#portal {
+  height: 100%;
+  width: auto;
+  overflow-y: scroll;
+  white-space: pre;
+}
+
 .attribute {
   background-color: black;
   border-radius: 30px;

@@ -8,7 +8,8 @@ from django.template import RequestContext
 from datetime import datetime
 from .models import Psychic
 
-import socket, select, string, sys
+import os
+import telnetlib
 
 def home(request):
     """
@@ -68,38 +69,20 @@ def telnet():
 
     link = get_object_or_404(Psychic, pk=1)
 
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.settimeout(2)
-
     host = 'theland.notroot.com'
     port = 5000
 
+    s = telnetlib.Telnet(host, port)
+
     try:
-        s.connect((host, port))
+        s
     except:
         print 'Unable to connect'
-        sys.exit()
+        os.sys.exit()
 
     print 'Connected!'
 
-    while 1:
-        socket_list = [sys.stdin, s]
+    return s
 
-        # Get the list sockets which are readable
-        read_sockets, write_sockets, error_sockets = select.select(socket_list , [], [])
 
-        for sock in read_sockets:
-            #incoming message from remote server
-            if sock == s:
-                data = sock.recv(4096)
-                if not data :
-                    return 'Connection closed'
-                    sys.exit()
-                else :
-                    return data
-                    sys.stdout.write(data)
-
-            #user entered a message
-            else :
-                msg = sys.stdin.readline()
-                s.send(msg)
+    s.close()
