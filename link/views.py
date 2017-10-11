@@ -7,6 +7,7 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 from .models import Psychic
+from .telnet import telnet
 
 def home(request):
     """
@@ -55,5 +56,8 @@ def link(request):
             'link': link,
             'title': "Link's Humble Abode",
             'message': 'If you do not know what is happening here, rememeber you can ask.',
+            'host': link.host,
+            'port': link.port,
+            'telnet': telnet,
         },
     )
