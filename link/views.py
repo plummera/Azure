@@ -73,6 +73,7 @@ def telnet():
     port = 5000
 
     s = telnetlib.Telnet(host, port)
+    s.set_debuglevel(9)
 
     try:
         s
@@ -82,7 +83,6 @@ def telnet():
 
     print 'Connected!'
 
-    return s
-
-
+    link.data = s.read_until("By what name do you wish to be known?")
+    return link.data
     s.close()
