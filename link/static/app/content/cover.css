@@ -166,6 +166,28 @@ body {
   width: 100%;
 }
 
+#hit {
+  background: #7fee1d;
+  border-radius: 60px;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  height: 38px;
+  margin: -5% 0%;
+  right: 18%;
+  width: 38px;
+}
+
+#miss {
+  background: red;
+  border-radius: 60px;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  height: 38px;
+  margin: -5% 0%;
+  right: 18%;
+  width: 38px;
+}
+
 #console {
   height: 30rem;
   width: 100%;
@@ -186,6 +208,15 @@ body {
   width: auto;
   overflow-y: scroll;
   white-space: pre;
+}
+
+#updates {
+    border: 4px solid gray;
+    border-radius: 15px;
+    height: 200px;
+    margin: -8% 4% 0% 4%;
+    overflow-y: scroll;
+    padding: 7%;
 }
 
 .attribute {

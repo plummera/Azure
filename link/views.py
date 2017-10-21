@@ -5,10 +5,11 @@ Definition of views.
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpRequest
 from django.template import RequestContext
-from datetime import datetime
 from .models import Psychic
 
+import datetime
 import os
+import pexpect
 import telnetlib
 
 def home(request):
@@ -65,24 +66,19 @@ def link(request):
         },
     )
 
-def telnet():
+def telnet(request):
 
     link = get_object_or_404(Psychic, pk=1)
+    password = 'wabiwabi'
 
     host = 'theland.notroot.com'
     port = 5000
 
-    s = telnetlib.Telnet(host, port)
-    s.set_debuglevel(9)
-
-    try:
-        s
-    except:
-        print 'Unable to connect'
-        os.sys.exit()
-
-    print 'Connected!'
-
-    link.data = s.read_until("By what name do you wish to be known?")
-    return link.data
-    s.close()
+    child = pexpect.spawn('telnet ' + str(host) + " " + str(port))
+    i = child.expect([pexpect.TIMEOUT, 'None'])
+    if i == 0:
+        return render(request, 'app/link.html')
+    if i == 1:
+        link.connect_attempt = 'HIT'
+        child.sendline('link')
+        child.expect ('(?i)password')

@@ -28,7 +28,7 @@ urlpatterns = [
             'extra_context':
             {
                 'title':'Log in',
-                'year':datetime.now().year,
+                'year':datetime.date.year,
             }
         },
         name='login'),

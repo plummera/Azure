@@ -11,13 +11,25 @@
         <div class="info col-sm-9">
           Host: {{ link.host }}
         </div>
-        <div class="info col-sm-6">
+
+        {% if link.connect_attempt == 'HIT' %}
+          <div id="hit" class="col-sm-3">
+          </div>
+        {% endif %}
+        {% if link.connect_attempt == 'MISS' %}
+          <div id="miss" class="col-sm-3">
+          </div>
+        {% endif %}
+
+        <div class="info col-sm-9">
           Port: {{ link.port }}
         </div>
-        <div class="info-2 col-sm-6">
+
+        <div class="info-2 col-sm-3">
           <button type="button" class="btn btn-success">Connect</button>
           <button type="button" class="btn btn-danger">Disconnect</button>
         </div>
+
       </div>
     </div>
 
@@ -50,8 +62,7 @@
       <div class="console col-md-10" data-spy="scroll" data-target="#console">
         <div id="console">
           <ul id="portal" class="nav nav-tabs" role="tablist" data-spy="scroll" data-offset="50">
-            <p>{{ telnet }}</p>
-            {{ link.data }}
+            <li>{{ telnet }}</li>
           </ul>
         </div>
       </div>
