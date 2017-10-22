@@ -35,5 +35,15 @@ function redLightIfUnsuccessful() {
   element.fadeOut(64);
 }
 
-setInterval(updateScroll,500);
-setInterval(redLightIfUnsuccessful, 500);
+function lightIndicator() {
+  if ($("#portal li")[0].outerText == "Connected!") {
+    $("#hit").removeClass("hidden");
+    setInterval(greenLightIfSuccessful, 500);
+  } else {
+    $("#miss").removeClass("hidden");
+    setInterval(redLightIfUnsuccessful, 500);
+  }
+}
+
+setInterval(updateScroll, 500);
+setInterval(lightIndicator, 500);

@@ -11,7 +11,7 @@ class PsychicAdmin(admin.ModelAdmin):
     fields = ['name', 'host', 'port', 'profession', 'connect_attempt']
 
 class UpdateAdmin(admin.ModelAdmin):
-    field = ['event', 'post_date']
+    fields = ['owner', 'event', 'post_date']
 
 admin.site.register(Psychic, PsychicAdmin)
 admin.site.register(Update, UpdateAdmin)

@@ -219,6 +219,17 @@ body {
     padding: 7%;
 }
 
+.article {
+  border: 1px solid gray;
+  border-radius: 15px;
+  margin: 7% 0%;
+  padding: 6%;
+}
+
+.article h4 {
+  text-decoration: underline;
+}
+
 .attribute {
   background-color: black;
   border-radius: 30px;
@@ -229,6 +240,10 @@ body {
 
 .console {
   text-align: left;
+}
+
+.hidden {
+  display: none;
 }
 
 .info {

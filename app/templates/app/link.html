@@ -12,14 +12,11 @@
           Host: {{ link.host }}
         </div>
 
-        {% if link.connect_attempt == 'HIT' %}
-          <div id="hit" class="col-sm-3">
-          </div>
-        {% endif %}
-        {% if link.connect_attempt == 'MISS' %}
-          <div id="miss" class="col-sm-3">
-          </div>
-        {% endif %}
+        <div id="hit" class="col-sm-3 hidden">
+        </div>
+
+        <div id="miss" class="col-sm-3 hidden">
+        </div>
 
         <div class="info col-sm-9">
           Port: {{ link.port }}
