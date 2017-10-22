@@ -84,7 +84,7 @@ def telnet():
     except:
         print("Exception was thrown")
         print("debug information:")
-        print(str(child))
+        print(str(s))
     if s == 0:
         print ("TIMED OUT")
     if s == 1:
