@@ -9,7 +9,6 @@ from .models import Psychic
 
 import datetime
 import os
-import pexpect
 import telnetlib
 
 def home(request):
@@ -66,19 +65,29 @@ def link(request):
         },
     )
 
-def telnet(request):
+def telnet():
 
     link = get_object_or_404(Psychic, pk=1)
     password = 'wabiwabi'
 
-    host = 'theland.notroot.com'
-    port = 5000
+    try:
+        s = telnetlib.Telnet(link.host, link.port)
+        s.set_debuglevel(9)
 
-    child = pexpect.spawn('telnet ' + str(host) + " " + str(port))
-    i = child.expect([pexpect.TIMEOUT, 'None'])
-    if i == 0:
-        return render(request, 'app/link.html')
-    if i == 1:
-        link.connect_attempt = 'HIT'
-        child.sendline('link')
-        child.expect ('(?i)password')
+        try:
+            s
+        except:
+            print 'Unable to connect'
+            os.sys.exit()
+
+        print 'Connected!'
+    except:
+        print("Exception was thrown")
+        print("debug information:")
+        print(str(child))
+    if s == 0:
+        print ("TIMED OUT")
+    if s == 1:
+        link.data = s.read_until("By what name do you wish to be known?")
+        return link.data
+        s.close()
