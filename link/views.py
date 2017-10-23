@@ -65,12 +65,24 @@ def link(request):
         },
     )
 
-def telnet(request):
+def telnet():
 
     link = get_object_or_404(Psychic, pk=1)
-    password = 'wabiwabi'
 
-    s = telnetlib.Telnet(link.host, link.port, 5)
+    host = 'theland.notroot.com'
+    port = 5000
 
+    s = telnetlib.Telnet(host, port)
     s.set_debuglevel(9)
-    s.read_until("Escape character is '^]'.")
+
+    try:
+        s
+    except:
+        print 'Unable to connect'
+        os.sys.exit()
+
+    return 'Connected!'
+
+    link.data = s.read_until("By what name do you wish to be known?")
+    return link.data
+    s.close()
