@@ -80,7 +80,9 @@ def telnet():
     except:
         print 'Unable to connect'
         os.sys.exit()
-        
-    link.data = s.interact()
+
+    return 'Connected!'
+
+    link.data = s.read_until("By what name do you wish to be known?")
     return link.data
     s.close()
