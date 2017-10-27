@@ -46,4 +46,4 @@ function lightIndicator() {
 }
 
 setInterval(updateScroll, 500);
-setInterval(lightIndicator, 500);
+setInterval(lightIndicator, 500); 
