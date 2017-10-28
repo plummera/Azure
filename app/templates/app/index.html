@@ -1,17 +1,15 @@
 {% extends "app/layout.html" %}
 
-{% load staticfiles %}
-<img src="{% static 'app/photos/splash.png' %}">
-
 {% block content %}
 
+{% load staticfiles %}
 <script src="{% static 'app/js/splash.js' %}"></script>
 
 <div id="splashVideo">
   <video id="my-video" class="video" muted loop>
-    <source src="{% static 'app/videos/splash2.mp4' %}" type="video/mp4">
-    <source src="{% static 'app/videos/splash2.mp4' %}" type="video/ogg">
-    <source src="{% static 'app/videos/splash2.mp4' %}" type="video/webm">
+    <source src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/splash2.mp4" type="video/mp4">
+    <source src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/splash2.mp4" type="video/ogg">
+    <source src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/splash2.mp4" type="video/webm">
   </video>
 
   <script>
@@ -27,8 +25,8 @@
 
   function myFunction() {
     $(video).css('opacity','0');
-    $('body').css('background-image','url("")');
-  }
+    $('body').css('background-image','url("http://anthonyplummer.elementfx.com/wp-content/uploads/2017/10/splash.jpg")');
+  };
 
   setTimeout(myFunction, 4555);
 
