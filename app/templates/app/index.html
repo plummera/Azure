@@ -25,7 +25,7 @@
 
   function myFunction() {
     $(video).css('opacity','0');
-    $('body').css('background-image','url({% static 'app/photos/splash.png' %})');
+    $('body').css('background-image','url("{% static 'app/photos/splash.png' %}")');
   }
 
   setTimeout(myFunction, 4555);
