@@ -8,7 +8,7 @@ from .models import Update
 
 # Register your models here.
 class PsychicAdmin(admin.ModelAdmin):
-    fields = ['name', 'host', 'port', 'profession', 'connect_attempt']
+    fields = ['name', 'host', 'port', 'profession', 'connect_attempt', 'level']
 
 class UpdateAdmin(admin.ModelAdmin):
     fields = ['owner', 'event', 'post_date']

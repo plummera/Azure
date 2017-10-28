@@ -53,14 +53,21 @@
           </li>
         </ul>
       </nav>
-        <h2>What does this do?</h2>
-        <p>Facilitate and demonstrate ROI through ongoing monitoring and correlation of access control frameworks and low-priority standards.</p>
-        <p><a class="btn btn-default" href="{% url 'link' %}">Learn more &raquo;</a></p>
+      <div class="card">
+        <div class="card-header">
+          <h3>What does this do?</h3>
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Facilitate and demonstrate ROI through ongoing monitoring and correlation of access control frameworks and low-priority standards.</p>
+            <div class="blockquote-footer">AP Engineering  &raquo;<cite title="Source Title"><a class="btn btn-default" href="{% url 'link' %}">Start mining the pool</a></cite></div>
+          </blockquote>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
 
-        <nav id="navbar-example2" class="navbar navbar-light bg-light">
-          <h2><u>Status</u></h2>
+        <nav class="navbar navbar-light bg-light">
           <ul class="nav nav-pills">
             <li class="nav-item dropdown">
               <div class="dropdown-menu">
@@ -72,6 +79,9 @@
           </ul>
         </nav>
         <div id="updates" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+
+          <div class="updateNavbarHeaderText">Status Updates</div>
+
           <div class="article">
             <h4 id="one">July</h4>
             <p>Can update via FTP ( I don't particularly like doing this ), searching for alternatives. Finding success w/ github.</p>

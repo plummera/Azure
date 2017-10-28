@@ -26,6 +26,7 @@ class Psychic(models.Model):
     )
     host = models.CharField(max_length=100, default='theland.notroot.com')
     port = models.IntegerField(default=4000)
+    level = models.CharField(default="Unknown", max_length=40)
     profession = models.CharField(max_length=15, choices=CLASSES)
     connect_attempt = models.CharField(max_length=15, choices=ATTEMPT_RESULT, blank=True)
 
