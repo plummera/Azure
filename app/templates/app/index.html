@@ -1,8 +1,10 @@
 {% extends "app/layout.html" %}
 
+{% load staticfiles %}
+<img src="{% static 'app/photos/splash.png' %}">
+
 {% block content %}
 
-{% load staticfiles %}
 <script src="{% static 'app/js/splash.js' %}"></script>
 
 <div id="splashVideo">
@@ -25,7 +27,7 @@
 
   function myFunction() {
     $(video).css('opacity','0');
-    $('body').css('background-image','url("{% static 'app/photos/splash.png' %}")');
+    $('body').css('background-image','url("")');
   }
 
   setTimeout(myFunction, 4555);
