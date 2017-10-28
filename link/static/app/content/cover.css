@@ -29,8 +29,12 @@ html,
 body {
   height: 100%;
   background-color: #333;
+  background-repeat: no-repeat;
 }
 body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
@@ -243,7 +247,9 @@ body {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }
 
 .info {
@@ -256,6 +262,8 @@ body {
 
 .jumbotron {
   background-color: #565656;
+  opacity: 0.7;
+  position: relative;
 }
 
 .spacer {
@@ -270,4 +278,38 @@ body {
   margin-left: -8%;
   text-align: center;
   width: 140%;
+}
+
+/* =============================================================================
+  VIDEO
+============================================================================= */
+.video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  min-width: 100%;
+  min-height: 90%;
+  opacity: 1;
+  transition: opacity 2s linear;
+  width: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+footer {
+  background: gray;
+  border-radius: 1px;
+  bottom: 0%;
+  margin: -1.5% 0%;
+  padding: 0.5% 0%;
+  position: fixed;
+  width: 100%;
 }

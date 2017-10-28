@@ -2,10 +2,40 @@
 
 {% block content %}
 
+{% load staticfiles %}
+<script src="{% static 'app/js/splash.js' %}"></script>
+
+<div id="splashVideo">
+  <video id="my-video" class="video" muted loop>
+    <source src="{% static 'app/videos/splash2.mp4' %}" type="video/mp4">
+    <source src="{% static 'app/videos/splash2.mp4' %}" type="video/ogg">
+    <source src="{% static 'app/videos/splash2.mp4' %}" type="video/webm">
+  </video>
+
+  <script>
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+
+  video.play();
+
+  $('#splashVideo').fadeIn();
+
+  function myFunction() {
+    $(video).css('opacity','0');
+    $('body').css('background-image','url({% static 'app/photos/splash.png' %})');
+  }
+
+  setTimeout(myFunction, 4555);
+
+  </script>
+</div>
+
 <div class="jumbotron">
     <h1>Projekt Phusion</h1>
     <p class="lead">Leveraged Django to operate on MacOS w/ Microsoft Azure.</p>
-    <p><a href="#" class="btn btn-primary btn-large">Please do not click</a></p>
 </div>
 
 <div class="row">
@@ -15,7 +45,7 @@
             Kaos is a MUD (Multi-User-Dimension) I have been involved with for a long time. I have decided to setup a python script to run
             some routines while I tend to rl responsibilities. The purpose is fun and entertainment. The derivatives have been insurmountable.
         </p>
-        <p><a class="btn btn-default" href="#">KaosHQ</a></p>
+        <p><a class="btn btn-default" href="#">Kaos HQ</a></p>
     </div>
     <div class="col-md-4">
         <h2>What does this do?</h2>
