@@ -214,12 +214,17 @@ body {
   white-space: pre;
 }
 
+#splashCarousel {
+  background: black;
+  opacity: 0.6;
+}
+
 #updates {
     background: black;
     border: 4px solid gray;
     border-radius: 15px;
-    height: 200px;
-    margin: -8% 4% 0% 4%;
+    height: 300px;
+    margin: -26% 4% 0% 4%;
     opacity: 0.6;
     overflow-y: scroll;
     padding: 7%;
