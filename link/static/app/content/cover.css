@@ -170,6 +170,12 @@ body {
   width: 100%;
 }
 
+#btc {
+  height: 13px;
+  margin-bottom: 4px;
+  width: 65px;
+}
+
 #hit {
   background: #7fee1d;
   border-radius: 60px;
@@ -267,6 +273,16 @@ body {
   margin-left: -7%;
 }
 
+.btcDonate {
+  opacity: 0;
+  padding: 5% 2% 0 0;
+}
+
+.btcDonate span {
+  font-size: 11px;
+  color: gold;
+  vertical-align: middle;
+}
 
 .console {
   text-align: left;
