@@ -12,7 +12,7 @@ $(document).ready(function() {
 
           var txt = [
             '<p>Help us make the internet a safe environment for everybody. Send  <img id="btc" src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/btc-logo-1.png"> to: <a href="#"><span>1EXth6hM97rZAawuGo1CN9Qqc6CmYqgYSG</span></a></p>',
-            '<p>No <img id="btc" src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/btc-logo-1.png">? Send <img id="ethereum" src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/ethereum.png"> to : <span>1EXth6hM97rZAawuGo1CN9Qqc6CmYqgYSG</span></p>',
+            '<p>No <img id="btc" src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/btc-logo-1.png">? Send <img id="ethereum" src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/ethereum-1.png"> to : <span>1EXth6hM97rZAawuGo1CN9Qqc6CmYqgYSG</span></p>',
           ];
 
           function change() {
@@ -34,11 +34,12 @@ $(document).ready(function() {
 
     setTimeout(seriously, 0);
     $('.btcDonate').css('opacity', '0');
+    $('footer').css('opacity','0');
     setTimeout(seriously, 5000);
     $('.btcDonate').css('opacity', '0');
-    setTimeout(seriously, 5000);
+    setTimeout(seriously, 10000);
     $('.btcDonate').css('opacity', '0');
-    setTimeout(seriously, 5000);
+    setTimeout(seriously, 15000);
 
 
   };

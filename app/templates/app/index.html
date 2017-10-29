@@ -34,7 +34,12 @@
     $('.article').css('border', '3px solid #3F4D1C');
   };
 
-  setTimeout(myFunction, 4560);
+  function stretchScreen() {
+    $('.video').css('position', 'absolute');
+  }
+
+  setTimeout(myFunction, 4775);
+  setTimeout(stretchScreen, 5000);
 
   </script>
 </div>
@@ -45,20 +50,21 @@
 </div>
 
 <div class="row">
+
     <div id="splashCarousel" class="col-md-8">
       <div class="card">
         <div class="card-header">
           <h3>What does this do?</h3>
         </div>
         <hr>
-        <div class="card-body col-xs-8 trackpack">
+        <div class="card-body col-sm-8 trackpack">
           <blockquote class="blockquote mb-0">
             <p>"Facilitate and demonstrate ROI through ongoing monitoring and correlation of medium-high level risk frameworks and access control standards."</p>
             <div class="blockquote-footer col-sm-4">- <i>Anthony P. &nbsp;</i></div>
           </blockquote>
         </div>
 
-        <div class="card-body col-xs-3 blockChainButton">
+        <div class="card-body col-sm-4 blockChainButton">
           <blockquote class="blockquote mb-0">
             <cite title="Source Title"><a class="btn btn-default" href="{% url 'link' %}">Blockchain Automation</a></cite>
           </blockquote>
@@ -84,6 +90,7 @@
 
       </div>
     </div>
+
     <div class="col-md-4">
       <div id="updates" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
         <div class="updateNavbarHeaderText">Status Updates</div>
