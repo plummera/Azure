@@ -216,15 +216,17 @@ body {
 
 #splashCarousel {
   background: black;
+  border: 3px double skyblue;
+  border-radius: 15px;
   opacity: 0.6;
 }
 
 #updates {
     background: black;
-    border: 4px solid gray;
+    border: 4px solid skyblue;
     border-radius: 15px;
     height: 300px;
-    margin: -26% 4% 0% 4%;
+    margin: 0% 4% 0% 4%;
     opacity: 0.6;
     overflow-y: scroll;
     padding: 7%;
@@ -250,6 +252,16 @@ body {
   text-align: center;
 }
 
+.blockquote-footer {
+  float: right;
+}
+
+.blockChainButton {
+  margin-top: 2%;
+  margin-left: -7%;
+}
+
+
 .console {
   text-align: left;
 }
@@ -270,13 +282,21 @@ body {
 
 .jumbotron {
   background-color: #565656;
-  border: 2px solid #ff9;
+  border: 2px solid white;
   opacity: 0.7;
   position: relative;
 }
 
+.social {
+  padding-bottom: 3%;
+}
+
 .spacer {
   height: 75px;
+}
+
+.trackpack p {
+  font-size: 14px;
 }
 
 .updateNavbarHeaderText {
@@ -324,10 +344,17 @@ body {
 footer {
   background: gray;
   border-radius: 1px;
-  bottom: 0%;
+  bottom: -1.5%;
   font-family: monospace;
-  margin: -1.5% 0%;
-  padding: 0.5% 0%;
+  font-size: 12px;
+  padding: 0.1% 2%;
   position: fixed;
+  text-align: right;
   width: 100%;
+}
+
+span {
+  color: red;
+  font-size: 8px;
+  vertical-align: super;
 }
