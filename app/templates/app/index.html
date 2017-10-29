@@ -24,22 +24,17 @@
   $('#splashVideo').fadeIn();
 
   function myFunction() {
-    $(video).css('opacity','0');
+    $('video').css('opacity','0');
     $('body').css('background-image','url("http://anthonyplummer.elementfx.com/wp-content/uploads/2017/10/splash.jpg")');
+    $('body').show("slide", { direction: "left" }, 1000);
     $('.jumbotron').css('border', '4px double #407B40');
     $('.jumbotron h1').css('color', 'darkorange');
     $('#splashCarousel').css('border', '3px double #407B40');
     $('#updates').css('border', '3px double #407B40');
     $('.article').css('border', '3px solid #3F4D1C');
-    $('.btcDonate').addClass('visible');
   };
 
-  function fadeInBTC() {
-    $('.btcDonate').css('opacity', '0');
-  };
-
-  setTimeout(myFunction, 4555);
-  setTimeout(fadeInBTC, 18337);
+  setTimeout(myFunction, 4560);
 
   </script>
 </div>
@@ -81,8 +76,8 @@
           </label>
 
           <div class="col-sm-12 btcDonate">
-            <p>Put some grease on these wheels! send  <img id="btc" src="//anthonyplummer.elementfx.com/wp-content/uploads/2017/10/btc-logo-1.png"> to: <a href="#"><span>1EXth6hM97rZAawuGo1CN9Qqc6CmYqgYSG</span></a></p>
           </div>
+
         </div>
 
 

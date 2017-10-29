@@ -176,6 +176,13 @@ body {
   width: 65px;
 }
 
+#ethereum {
+  height: 32px;
+  width: 100px;
+  margin: 4px 8px;
+  background: burlywood;
+}
+
 #hit {
   background: #7fee1d;
   border-radius: 60px;
@@ -275,7 +282,9 @@ body {
 
 .btcDonate {
   opacity: 0;
-  padding: 5% 2% 0 0;
+  padding: 0% 2% 0 0;
+  transition-timing-function: ease;
+  transition: 5s;
 }
 
 .btcDonate span {
@@ -284,12 +293,21 @@ body {
   vertical-align: middle;
 }
 
+.btcDonate hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .console {
   text-align: left;
 }
 
+.ethereumDonate {
+  transition-timing-function: ease;
+  transition: 5s;
+}
+
 .hidden {
-  visibility: hidden;
   opacity: 0;
   transition: visibility 0s 2s, opacity 2s linear;
 }
@@ -318,7 +336,7 @@ body {
 }
 
 .social {
-  padding-bottom: 3%;
+  padding-bottom: 0%;
 }
 
 .spacer {
