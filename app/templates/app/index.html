@@ -3,6 +3,8 @@
 {% block content %}
 
 {% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/cover.css' %}" />
+
 <script src="{% static 'app/js/splash.js' %}"></script>
 
 <div id="splashVideo">
@@ -58,14 +60,17 @@
 
     <div id="splashCarousel" class="col-md-8">
       <div class="card">
+
+        <hr>
+
         <div class="card-header">
           <h3>What does this do?</h3>
         </div>
         <hr>
         <div class="card-body col-sm-8 trackpack">
           <blockquote class="blockquote mb-0">
-            <p>"Facilitate and demonstrate ROI through ongoing monitoring and correlation of medium-high level risk frameworks and access control standards."</p>
-            <div class="blockquote-footer col-sm-4">- <i>Anthony P. &nbsp;</i></div>
+            <p>"Facilitates ROI through real-time monitoring of pre-processed AI datapools, Demonstrates competitive advantage through a correlation of medium-high level risk frameworks and access control standards."</p>
+            <div class="blockquote-footer col-sm-6">- <i>Anthony T. Plummer &nbsp;<span id="profession">Lead Foreman</span></i></div>
           </blockquote>
         </div>
 

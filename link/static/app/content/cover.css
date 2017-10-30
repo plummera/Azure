@@ -236,6 +236,11 @@ body {
   white-space: pre;
 }
 
+#profession {
+  color: gold;
+  float: right;
+}
+
 #splashCarousel {
   background: black;
   border: 3px double skyblue;

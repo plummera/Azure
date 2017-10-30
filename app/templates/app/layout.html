@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Project Fusion</title>
     {% load staticfiles %}
+    <link rel="icon" href="{% static 'app/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/cover.css' %}" />
     <!-- <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" /> -->
-    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,6 +49,7 @@
     <p>&copy; {{ year }} - AP Engineering</p>
 </footer>
 
+<script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
 <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
 <script src="{% static 'app/scripts/respond.js' %}"></script>
 {% block scripts %}{% endblock %}
