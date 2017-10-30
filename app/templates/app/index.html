@@ -38,8 +38,13 @@
     $('.video').css('position', 'absolute');
   }
 
+  function flushVideo() {
+    $('#my-video').css('width', '100%');
+  }
+
   setTimeout(myFunction, 4775);
   setTimeout(stretchScreen, 5000);
+  setTimeout(flushVideo, 8000);
 
   </script>
 </div>
@@ -65,7 +70,7 @@
         </div>
 
         <div class="card-body col-sm-4 blockChainButton">
-          <blockquote class="blockquote mb-0">
+          <blockquote class="blockquote mb-1">
             <cite title="Source Title"><a class="btn btn-default" href="{% url 'link' %}">Blockchain Automation</a></cite>
           </blockquote>
         </div>

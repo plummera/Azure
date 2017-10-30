@@ -23,9 +23,9 @@ $(document).ready(function() {
           txt1 = $('.btcDonate').html();
           if (txt1.match(txt[0])) {
             setInterval("$('.btcDonate').css('opacity', '0')", 1000);
-            setInterval(change, 4000);
+            setInterval(change, 7000);
           } else {
-            $('.btcDonate').append(txt[0]);
+            $('.btcDonate').html(txt[0]);
           };
 
           $('.btcDonate').css('opacity', '1');
@@ -35,12 +35,7 @@ $(document).ready(function() {
     setTimeout(seriously, 0);
     $('.btcDonate').css('opacity', '0');
     $('footer').css('opacity','0');
-    setTimeout(seriously, 5000);
-    $('.btcDonate').css('opacity', '0');
-    setTimeout(seriously, 10000);
-    $('.btcDonate').css('opacity', '0');
-    setTimeout(seriously, 15000);
-
+    setTimeout(seriously, 7775);
 
   };
 

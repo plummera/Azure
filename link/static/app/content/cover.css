@@ -209,6 +209,11 @@ body {
   width: 38px;
 }
 
+#my-video {
+  transition-timing-function: ease;
+  transition: 3s;
+}
+
 #console {
   height: 30rem;
   width: 100%;
@@ -387,7 +392,7 @@ body {
   min-width: 100%;
   min-height: 90%;
   opacity: 1;
-  transition: opacity 2s linear;
+  transition: opacity 1s linear;
   width: auto;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -444,14 +449,34 @@ span {
 @media screen and (max-device-width: 640px){
   /* some CSS here */
   #splashCarousel {
-    margin: 30px;
+    position: relative;
+    margin: 20em 30px 30px 30px;
+  }
+
+  .btn-secondary {
+    margin: 0 0.1em 12px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 3%;
+    width: 32%;
+  }
+
+  .jumbotron {
+    margin-top: 35%;
+  }
+
+  .mb-1 {
+    border: 2px double white;
+    margin: 50px 0px 20px 20px;
   }
 }
 
 /* #### iPhone 4+ Portrait or Landscape #### */
 @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
   #splashCarousel {
-    margin: 30px;
+    margin: 20em 30px 30px 30px;
   }
 }
 
